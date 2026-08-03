@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:ital,wght@0,400;1,400;0,500&amp;display=swap" rel="stylesheet">
+<style>
+  @font-face{font-family:'NBC Tinker Black';src:url('fonts/NBCTinker-Black.otf') format('opentype');font-display:swap;}
+  @font-face{font-family:'Spline Sans Mono';src:url('fonts/SplineSansMono.ttf') format('truetype-variations');font-display:swap;}
+  body{margin:0;padding:0;box-sizing:border-box;background:#EEEBE6;}
+  *{box-sizing:border-box;}
+  a{color:#141414;text-decoration:none;}
+  a:hover{color:#B8280F;}
+  ::selection{background:#141414;color:#EEEBE6;}
+
+@media (max-width: 1024px) {
+  .tk-shell{flex-direction:column !important;}
+  .tk-nav{width:100% !important;flex-direction:row !important;align-items:center !important;justify-content:flex-start !important;padding:14px 16px !important;border-right:none !important;border-bottom:1px solid #14141422 !important;gap:16px !important;overflow-x:auto !important;height:auto !important;}
+  .tk-nav > div:nth-child(1){padding:0 !important;flex-shrink:0 !important;}
+  .tk-nav > div:nth-child(2){flex-direction:row !important;gap:18px !important;padding:0 !important;flex-shrink:0 !important;}
+  .tk-nav > div:nth-child(3){display:none !important;}
+  .tk-header{padding:12px 16px !important;flex-wrap:wrap !important;row-gap:6px !important;}
+  .tk-footer{padding:14px 16px !important;flex-wrap:wrap !important;row-gap:10px !important;}
+
+  [style*="padding:44px 40px"],[style*="padding:56px 40px"]{padding:24px 20px 0 !important;}
+  [style*="padding:24px 40px"]{padding:20px 20px !important;}
+  [style*="padding:20px 40px"]{padding:18px 20px !important;}
+  [style*="padding:18px 40px"]{padding:14px 20px !important;}
+
+  [style*="width:320px"],[style*="width:300px"],[style*="width:340px"],[style*="width:380px"],[style*="width:440px"],[style*="width:220px"],[style*="width:280px"],[style*="width:200px"],[style*="width:180px"]{width:100% !important;}
+
+  [style*="grid-template-columns:repeat(3,1fr)"],[style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr !important;}
+
+  [style*="display:flex"]{flex-wrap:wrap !important;}
+
+  [style*="flex:1;min-width:0;display:flex;flex-direction:column;"]{min-height:420px !important;}
+
+  h1[style*="font-size:64px"],h1[style*="font-size:60px"],h1[style*="font-size:56px"],h1[style*="font-size:52px"],[style*="font-size:46px"]{font-size:32px !important;}
+  h2[style*="font-size:52px"],h2[style*="font-size:56px"]{font-size:26px !important;}
+
+  [style*="margin-left:-60px"],[style*="margin-right:-60px"]{margin-left:0 !important;margin-right:0 !important;}
+  [style*="max-width:1200px"]{max-width:100% !important;}
+}
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div class="tk-shell" style="display:flex;min-height:100vh;background:#EEEBE6;color:#141414;font-family:'Spline Sans Mono',monospace;">
+
+  <nav class="tk-nav" style="width:150px;flex-shrink:0;border-right:1px solid #14141422;display:flex;flex-direction:column;justify-content:space-between;padding:32px 0 28px;">
+    <div style="padding:0 28px;">
+      <img src="uploads/trakhaus_logo_no_bg%20(1).png" alt="Trakhaus" style="width: 105px; height: 112px; object-fit: contain; display: block">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px;padding:0 28px;">
+      <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="9">
+        <a href="{{ item.href }}" style="display:flex;align-items:baseline;gap:8px;text-decoration:none;">
+          <sc-if value="{{ item.active }}" hint-placeholder-val="{{ false }}">
+            <div style="width:5px;height:5px;border-radius:50%;background:#B8280F;flex-shrink:0;"></div>
+          </sc-if>
+          <sc-if value="{{ item.activeInv }}" hint-placeholder-val="{{ true }}">
+            <div style="width:5px;height:5px;flex-shrink:0;"></div>
+          </sc-if>
+          <div style="display:flex;flex-direction:column;">
+            <span style="font-size:11px;color:#14141466;">{{ item.num }}</span>
+            <span style="font-size:12px;font-weight:600;letter-spacing:0.02em;color:{{ item.color }};">{{ item.label }}</span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+    <div style="padding:0 28px;display:flex;flex-direction:column;gap:14px;">
+      <div style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:10px;letter-spacing:0.08em;color:#14141466;height:120px;">TRAKHAUS RECORDINGS &nbsp; EST. 2017</div>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 0V20M0 10H20" stroke="#14141440" stroke-width="1"></path></svg>
+    </div>
+  </nav>
+
+  <div style="width:440px;flex-shrink:0;display:flex;flex-direction:column;justify-content:space-between;padding:40px;border-right:1px solid #14141422;">
+    <div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:60px;">
+        <div style="width:60px;height:1px;background:#14141440;"></div>
+        <span style="font-size:11px;letter-spacing:0.02em;color:#14141499;text-align:right;">40.6763° N<br>73.9980° W</span>
+      </div>
+      <div style="font-size:12px;font-weight:600;letter-spacing:0.04em;color:#B8280F;margin-bottom:14px;">BROOKLYN, NEW YORK</div>
+      <h1 style="margin:0 0 22px;font-family:'NBC Tinker Black',Arial,sans-serif;font-weight:800;font-size:56px;line-height:0.95;text-transform:uppercase;">
+        WHERE IDEAS BECOME RECORDS<span style="color:#B8280F;">.</span>
+      </h1>
+      <p style="margin:0 0 28px;font-family:'IBM Plex Serif',serif;font-size:15.5px;line-height:1.7;color:#14141499;">
+        A creative production studio for music, film, podcasts, and culture. Built for the work that lasts.
+      </p>
+      <div style="display:flex;align-items:center;gap:20px;">
+        <a href="#" style="background:#B8280F;color:#EEEBE6;padding:14px 22px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;display:flex;align-items:center;gap:10px;min-height:44px;" style-hover="background:#141414;">BOOK A SESSION <span>→</span></a>
+        <a href="#" style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;border-bottom:1px solid #141414;padding-bottom:2px;">EXPLORE THE STUDIO →</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #14141422;padding-top:20px;display:flex;gap:32px;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div>
+          <div style="font-size:10.5px;letter-spacing:0.03em;color:#14141466;margin-bottom:6px;">{{ s.label }}</div>
+          <div style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;">{{ s.value }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <div style="flex:1;min-width:0;display:flex;flex-direction:column;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:#141414;color:#EEEBE6cc;">
+      <span style="font-size:11px;letter-spacing:0.04em;">TRAKHAUS RECORDINGS</span>
+      <span style="font-size:11px;letter-spacing:0.04em;">EST. 2017</span>
+    </div>
+    <div style="position:relative;flex:1;min-height:0;">
+      <image-slot id="home-hero-control-room" placeholder="Control room hero photo" shape="rect" style="width:100%;height:100%;display:block;"><div style="position: absolute; top: 99px; border: 1px solid #ffffff55; padding: 12px 16px; color: #EEEBE6; font-size: 11px; line-height: 1.7; letter-spacing: 0.02em; left: 811px; font-family: &quot;Spline Sans Mono&quot;, monospace">
+        CONTROL ROOM A<br><span style="color:#ffffff88;">STATUS</span><br>ONLINE<br><span style="color:#ffffff88;">TYPE</span><br>HYBRID ANALOG
+      </div></image-slot>
+      
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:#141414;color:#EEEBE6aa;font-size:11px;letter-spacing:0.02em;">
+      <span>© 2025 TRAKHAUS RECORDINGS</span>
+      <span>174 VAN DYKE ST, BROOKLYN, NY</span>
+      <span>RED HOOK</span>
+      <span>ALL RIGHTS RESERVED</span>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const navDefs = [
+      ['01', 'HOME'], ['02', 'PHILOSOPHY'], ['03', 'THE RECORD'], ['04', 'THE SPACE'],
+      ['05', 'THE TOOLS'], ['06', 'THE OWNER'], ['07', 'THE LOCATION'], ['08', 'BEYOND RECORDING'], ['09', 'THE INVITATION'],
+    ];
+    const FILE_MAP = {'01':'Scene 01 - Home.dc.html','02':'Scene 02 - The Idea.dc.html','03':'Scene 03 - Selected Work.dc.html','04':'Scene 04 - The Space.dc.html','05':'Scene 05 - The Tools.dc.html','06':'Scene 06 - The Owner.dc.html','07':'Scene 07 - The Location.dc.html','08':'Scene 08 - Beyond Recording.dc.html','09':'Scene 09 - The Invitation.dc.html'};
+    const navItems = navDefs.map(([num, label]) => ({
+      num, label, active: num === '01', activeInv: num !== '01',
+      color: num === '01' ? '#B8280F' : '#141414', href: FILE_MAP[num],
+    }));
+    return {
+      navItems,
+      stats: [
+        { label: 'ENGINEER', value: 'MUDDIGOLD' },
+        { label: 'CREDITS', value: '190+' },
+        { label: 'COLLABORATORS', value: '211' },
+        { label: 'RANK', value: 'TOP 2% PRODUCER' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>
