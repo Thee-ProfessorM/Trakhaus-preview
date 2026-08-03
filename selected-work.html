@@ -159,9 +159,15 @@ class Component extends DCLogic {
       ['09', '22GZ', 'GROWTH & DEVELOPMENT II', 'MIXING, MASTERING', '2023'],
     ];
     const COVERS = {
-      '01': 'images/work-01-city-morgue.png', '02': 'images/work-02-luvers-rock.png', '03': 'images/work-03-timeny-lewis.png',
-      '04': 'images/work-04-draft-day.png', '05': 'images/work-05-22gz-blixky.png', '06': 'images/work-06-tme.png',
-      '07': 'images/work-07-lil-crix.png', '08': 'images/work-08-baby-gee.png', '09': 'images/work-09-22gz-grown.png',
+      '01': 'uploads/CITY MORGUE VOL 1 HELL OR HIGH WATER.jpg',
+      '02': 'uploads/Estelle Lovers Rock.jpg',
+      '03': 'uploads/TIMENY LEWIS GOLD.jpg',
+      '04': 'uploads/ON THE RISE by Draft Day.jpg',
+      '05': 'uploads/The Blixky Tape 2 (Deluxe) by 22Gz.jpg',
+      '06': 'uploads/T_ME - The Death of Robert Scott.jpg',
+      '07': 'uploads/Kold Shoulder - Single - Album by Lil Crix & BLP KOSHER.jpg',
+      '08': 'uploads/baby_gee_PSTDREAMS.jpg',
+      '09': 'uploads/22gz - Grown_Development II.png',
     };
     const projects = projectsRaw.map(([num, artist, title, credits, year]) => ({
       num, artist, title, credits, year, tag: 'MUSIC', cover: COVERS[num],
