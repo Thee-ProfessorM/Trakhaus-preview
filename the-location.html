@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -90,7 +90,7 @@
         <span style="font-size:12px;font-weight:600;letter-spacing:0.04em;">THE LOCATION</span>
       </div>
       <span style="font-size:12px;letter-spacing:0.03em;color:#14141499;">BROOKLYN, NEW YORK</span>
-      <span style="font-size:12px;letter-spacing:0.02em;color:#14141499;">40.6763° N, 73.9980° W</span>
+      <span style="font-size:12px;letter-spacing:0.02em;color:#14141499;">40.6763Â° N, 73.9980Â° W</span>
     </div>
 
     <div style="padding:44px 40px 0;">
@@ -101,7 +101,7 @@
       <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:34px;opacity:{{ fadeVals.subtitle }};transition:opacity 0.9s ease 0.15s;">
         <span style="font-size:14px;font-weight:600;letter-spacing:0.04em;">BROOKLYN, NEW YORK</span>
         <p style="margin: 0; font-family: 'IBM Plex Serif',serif; font-size: 16px; line-height: 1.7; font-style: italic; color: #141414cc; max-width: 640px">
-          “Trakhaus is where sound lives—a creative home for recording, producing, mixing, and bringing your ideas to life. From music to podcasts, we provide everything you need under one roof in a space that’s comfortable, inspiring, and designed for creativity.”
+          â€œTrakhaus is where sound livesâ€”a creative home for recording, producing, mixing, and bringing your ideas to life. From music to podcasts, we provide everything you need under one roof in a space thatâ€™s comfortable, inspiring, and designed for creativity.â€
         </p>
       </div>
 
@@ -116,7 +116,7 @@
         </div>
         <div style="flex:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.03em;color:#14141466;margin-bottom:6px;">COORDINATES</div>
-          <div style="font-size:14px;">40.6763° N, 73.9980° W</div>
+          <div style="font-size:14px;">40.6763Â° N, 73.9980Â° W</div>
         </div>
         <div style="flex:1;">
           <div style="font-size:11px;font-weight:600;letter-spacing:0.03em;color:#14141466;margin-bottom:6px;">UPDATED</div>
@@ -156,7 +156,7 @@
       <div style="display:flex;gap:56px;padding:32px 0;border-top:1px solid #14141422;opacity:{{ fadeVals.directions }};transition:opacity 0.9s ease 0.55s;">
         <div style="flex:1;min-width:0;">
           <div style="font-size:12px;font-weight:600;letter-spacing:0.03em;margin-bottom:4px;">GETTING TO TRAKHAUS RECORDINGS</div>
-          <div style="font-size:12px;color:#14141499;margin-bottom:18px;">174 Van Dyke St, Brooklyn, NY — Red Hook</div>
+          <div style="font-size:12px;color:#14141499;margin-bottom:18px;">174 Van Dyke St, Brooklyn, NY â€” Red Hook</div>
           <div style="display:flex;flex-direction:column;gap:16px;">
             <sc-for list="{{ directions }}" as="d" hint-placeholder-count="4">
               <div style="display:flex;gap:12px;align-items:flex-start;">
@@ -176,15 +176,15 @@
           174 VAN DYKE STREET<br>BROOKLYN, NY 11231
         </div>
         <a href="https://www.google.com/maps/dir/?api=1&amp;destination=174+Van+Dyke+Street,+Brooklyn,+NY+11231" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.04em;padding-bottom:2px;border-bottom:1px solid transparent;" style-hover="border-bottom:1px solid #B8280F;color:#B8280F;">
-          NAVIGATE TO THE STUDIO <span>→</span>
+          NAVIGATE TO THE STUDIO <span>â†’</span>
         </a>
       </div>
     </div>
 
     <div class="tk-footer" style="display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-top:1px solid #14141422;">
-      <a href="Scene 06 - The Owner.dc.html" style="display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:0.02em;text-decoration:none;">
+      <a href="the-owner.html" style="display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:0.02em;text-decoration:none;">
         <span style="color:#14141499;">PREV</span>
-        <span>←</span>
+        <span>â†</span>
         <span style="color:#14141499;">SCENE 06</span>
         <span style="font-weight:600;">THE OWNER</span>
       </a>
@@ -193,11 +193,11 @@
           <div style="width:{{ t.width }};height:1px;background:{{ t.color }};"></div>
         </sc-for>
       </div>
-      <a href="Scene 08 - Beyond Recording.dc.html" style="display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:0.02em;text-decoration:none;">
+      <a href="beyond-recording.html" style="display:flex;align-items:center;gap:14px;font-size:12px;letter-spacing:0.02em;text-decoration:none;">
         <span style="color:#14141499;">SCENE 08</span>
         <span style="font-weight:600;">BEYOND RECORDING</span>
         <span style="color:#14141499;">NEXT</span>
-        <span>→</span>
+        <span>â†’</span>
       </a>
     </div>
 
@@ -215,7 +215,7 @@ class Component extends DCLogic {
       ['01', 'HOME'], ['02', 'PHILOSOPHY'], ['03', 'THE RECORD'], ['04', 'THE SPACE'],
       ['05', 'THE TOOLS'], ['06', 'THE OWNER'], ['07', 'THE LOCATION'], ['08', 'BEYOND RECORDING'], ['09', 'THE INVITATION'],
     ];
-    const FILE_MAP = {'01':'Scene 01 - Home.dc.html','02':'Scene 02 - The Idea.dc.html','03':'Scene 03 - Selected Work.dc.html','04':'Scene 04 - The Space.dc.html','05':'Scene 05 - The Tools.dc.html','06':'Scene 06 - The Owner.dc.html','07':'Scene 07 - The Location.dc.html','08':'Scene 08 - Beyond Recording.dc.html','09':'Scene 09 - The Invitation.dc.html'};
+    const FILE_MAP = {'01':'index.html','02':'the-idea.html','03':'selected-work.html','04':'the-space.html','05':'the-tools.html','06':'the-owner.html','07':'the-location.html','08':'beyond-recording.html','09':'the-invitation.html'};
     const navItems = navDefs.map(([num, label]) => ({
       num, label, active: num === '07', activeInv: num !== '07',
       color: num === '07' ? '#B8280F' : '#141414', href: FILE_MAP[num],
@@ -263,3 +263,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+

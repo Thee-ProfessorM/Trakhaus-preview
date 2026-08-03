@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -82,7 +82,7 @@
     <div>
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:60px;">
         <div style="width:60px;height:1px;background:#14141440;"></div>
-        <span style="font-size:11px;letter-spacing:0.02em;color:#14141499;text-align:right;">40.6763° N<br>73.9980° W</span>
+        <span style="font-size:11px;letter-spacing:0.02em;color:#14141499;text-align:right;">40.6763Â° N<br>73.9980Â° W</span>
       </div>
       <div style="font-size:12px;font-weight:600;letter-spacing:0.04em;color:#B8280F;margin-bottom:14px;">BROOKLYN, NEW YORK</div>
       <h1 style="margin:0 0 22px;font-family:'NBC Tinker Black',Arial,sans-serif;font-weight:800;font-size:56px;line-height:0.95;text-transform:uppercase;">
@@ -92,8 +92,8 @@
         A creative production studio for music, film, podcasts, and culture. Built for the work that lasts.
       </p>
       <div style="display:flex;align-items:center;gap:20px;">
-        <a href="#" style="background:#B8280F;color:#EEEBE6;padding:14px 22px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;display:flex;align-items:center;gap:10px;min-height:44px;" style-hover="background:#141414;">BOOK A SESSION <span>→</span></a>
-        <a href="#" style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;border-bottom:1px solid #141414;padding-bottom:2px;">EXPLORE THE STUDIO →</a>
+        <a href="#" style="background:#B8280F;color:#EEEBE6;padding:14px 22px;font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;display:flex;align-items:center;gap:10px;min-height:44px;" style-hover="background:#141414;">BOOK A SESSION <span>â†’</span></a>
+        <a href="#" style="font-family:'IBM Plex Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.03em;border-bottom:1px solid #141414;padding-bottom:2px;">EXPLORE THE STUDIO â†’</a>
       </div>
     </div>
     <div style="border-top:1px solid #14141422;padding-top:20px;display:flex;gap:32px;">
@@ -118,7 +118,7 @@
       
     </div>
     <div style="display:flex;align-items:center;justify-content:space-between;padding:16px 28px;background:#141414;color:#EEEBE6aa;font-size:11px;letter-spacing:0.02em;">
-      <span>© 2025 TRAKHAUS RECORDINGS</span>
+      <span>Â© 2025 TRAKHAUS RECORDINGS</span>
       <span>174 VAN DYKE ST, BROOKLYN, NY</span>
       <span>RED HOOK</span>
       <span>ALL RIGHTS RESERVED</span>
@@ -134,7 +134,7 @@ class Component extends DCLogic {
       ['01', 'HOME'], ['02', 'PHILOSOPHY'], ['03', 'THE RECORD'], ['04', 'THE SPACE'],
       ['05', 'THE TOOLS'], ['06', 'THE OWNER'], ['07', 'THE LOCATION'], ['08', 'BEYOND RECORDING'], ['09', 'THE INVITATION'],
     ];
-    const FILE_MAP = {'01':'Scene 01 - Home.dc.html','02':'Scene 02 - The Idea.dc.html','03':'Scene 03 - Selected Work.dc.html','04':'Scene 04 - The Space.dc.html','05':'Scene 05 - The Tools.dc.html','06':'Scene 06 - The Owner.dc.html','07':'Scene 07 - The Location.dc.html','08':'Scene 08 - Beyond Recording.dc.html','09':'Scene 09 - The Invitation.dc.html'};
+    const FILE_MAP = {'01':'index.html','02':'the-idea.html','03':'selected-work.html','04':'the-space.html','05':'the-tools.html','06':'the-owner.html','07':'the-location.html','08':'beyond-recording.html','09':'the-invitation.html'};
     const navItems = navDefs.map(([num, label]) => ({
       num, label, active: num === '01', activeInv: num !== '01',
       color: num === '01' ? '#B8280F' : '#141414', href: FILE_MAP[num],
@@ -154,3 +154,4 @@ class Component extends DCLogic {
 </script>
 </body>
 </html>
+
